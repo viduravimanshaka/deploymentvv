@@ -1,0 +1,38 @@
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+
+}
+
+h1{
+  position: relative;
+}
+
+h1 ::after{
+  content:"";
+  display:block;
+  position: absolute;
+  left: -10%;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.35);
+  transform: rotate(-20deg);
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count:infinite ;
+  color: #321686;
+}
+
+@keyframes move {
+  from, to {
+    left:10%;
+  }
+
+  50%,99%{
+    left:110%;
+  }
+}
